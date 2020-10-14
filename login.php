@@ -15,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	$errores=$usuario->validar();
 }
 
-
+#probando el github en el prototipo
 require 'views/login.view.php';
 
  ?>
