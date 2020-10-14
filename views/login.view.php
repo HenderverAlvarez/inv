@@ -19,7 +19,7 @@
 			<div class="row jumbotron bg-info">
 					<div class="col-md-10">
 
-						<h1 class="bav mb-4">Banco Agricola De Venezuela</h1>
+						<h1 class="bav mb-4">Banco Agricola De Venezuela NUevo diseño</h1>
 						<hr>
 						<p>Inventario de puntos de venta</p>
 
