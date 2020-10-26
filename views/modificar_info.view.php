@@ -6,10 +6,10 @@
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/estilo.css">
-	<link rel="shortcut icon" type="image/png" href="img/favicon.jpg">
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/fontello.css">
 	<link rel="shortcut icon" type="image/png" href="img/favicon.jpg">
+
 </head>
 
 <body>
@@ -51,7 +51,7 @@
 			<a title="Gestion de Usuarios" href='#user' aria-expanded='false' aria-controls='user' data-toggle='collapse'><i class="icon-user"></i><span>Gestion de usuarios</span></a>
 
 			<div class='collapse' id='user'>	
-				<a title='Cambiar Contraseña' href='registro.php'><i class='icon-pencil'></i><span>Cambiar Contraseña</span></a>
+				<a title='Cambiar Contraseña' href='camb_clave_i.php'><i class='icon-pencil'></i><span>Cambiar Contraseña</span></a>
 				<a title='Modificar informacion' href='modificar_info.php'><i class='icon-info'></i><span>Modificar informacion</span></a>
 			</div>	
 		</div>
@@ -60,7 +60,7 @@
 				<a title='Registrar Usuarios' href='registro.php'><i class='icon-user-plus'></i><span>Registrar usuarios</span></a>
 				<a title='Reportes de Seguridad' href='reportes.php'><i class='icon-bank'></i><span>Reportes de Seguridad</span></a>
 				<a title='Eliminar Usuarios' href='eliminar_usuario.php'><i class=' icon-user-times'></i><span>Eliminar 
-				<a title='Cambiar Contraseña' href='registro.php'><i class='icon-pencil'></i><span>Cambiar Contraseña</span></a>
+				<a title='Cambiar Contraseña' href='camb_clave_i.php'><i class='icon-pencil'></i><span>Cambiar Contraseña</span></a>
 				<a title='Modificar informacion' href='modificar_info.php'><i class='icon-info'></i><span>Modificar informacion</span></a>
 			</div>
 
@@ -77,8 +77,7 @@
 <div class="col-md-9">
 
 
-
-								<!--Fila Para El header-->
+<!--Fila Para El header-->
 				<div class="row header justify-content-end">					
 					<div class="col-md-12">
 							<div class="row jumbotron jumbo">
@@ -92,69 +91,59 @@
 				</div>
 						<!--Fila Para contenido Principal-->
 																	<!--Aqui van las cards para la vista general del inventario-->
+	<h3 class="text-center">Modificar Informacion de Usuario</h3>
+			<main class="row main modificacion justify-content-around mb-5">
+				<div class="col-10">
+					<form class="" action="<?php	echo $_SERVER['PHP_SELF'];?>" method="POST">
 
-			<main class="row main justify-content-around">
-			<div class="col-9">
+						<div class="row mt-3 mb-4">
+							<div class="col-6">
+								<div class="form-group">
+								<label for="cedula">Modificar Cedula</label>
+								<input class="form-control" type="text" name="cedula" placeholder="cedula">	
+								</div>
+							</div>
 
-									<div class="row back mb-2">
-													<div class="col-3">
-														<a class="btn text-white boton" href="inventario.php"><span class="mr-2">&laquo;</span>Regresar</a>
-													</div>
-									</div>
-
-				<form method='POST' action="<?php echo $_SERVER['PHP_SELF']?>" class='modificacion mb-4'>
-
-					<h3 class="text-center">Cambio de Contraseña</h3>
-					<hr>
-					<div class="row justify-content-center">
-						<div class="col-11">
+							<div class="col-6">
 							<div class="form-group">
-								<label for='pass_a'>Escriba su clave actual</label> <input class='form-control' type='password' name='pass_a' id='pass_a'>
+								<label for="cedula">Modificar Fecha de nacimiento</label>
+								<input class="form-control" type="date" name="fecha">	
+							</div>								
 							</div>
 						</div>
-					</div>
-										
-					<div class="row justify-content-around">
-							<div class="col-5">
-								<div class='form-group mb-3'>
-								<label for='pass_n'>Escriba su nueva clave</label> <input class='form-control' type='password' name='pass_n' id='pass_n'>
-								</div>
+						
+						<div class="row justify-content-around mb-3">
+							<div class="col-6">
+								<a href="panel_a.php" class="btn botoni btn-block">&laquo; Regresar</a>
+							</div>
+							<div class="col-6">
+								<button class="btn boton btn-block">Confirmar &raquo;</button>	
 							</div>
 						
+						</div>
+						
+					</form>
 
-							<div class="col-5">
-								<div class='form-group mb-3'>
-								<label for='pass_n2'>Repita su nueva clave</label> <input class='form-control' type='password' name='pass_n2' id='pass_n2'>
-								</div>
-							</div>
-					</div>		
+					<?php if(!empty($errores)):?>
+						<div class="row justify-content-around mt-3">
 
-					<div class="row justify-content-center">	
-							<div class="col-6">							
-									<div class='form-group mt-3 mb-3'>
-										<button class='btn boton btn-block' value='Continuar'>Continuar</button>
-									</div>
-							</div>
-					</div>
-
-					<div class="row">
-							<div class="col">
-								<p class="text-center"><?php echo $errores;?></p>
-							</div>
-					</div>
-
-				</form>			
-			</div>
+							<div class="col-12">
+								<?php echo $errores;?>
+							</div>		
+						</div>
+					<?php endif;?>
+				</div>
 			</main>
-		</div>
-	</div>
 
+</div>
+
+	</div>
+	</div>
 			<div class="row footer bg-inverse">
 				<div class="col-12">
 					<p class="text-center text-white my-3" > Henderver Alvarez || Banco Agricola de Venezuela || UPTAMCA 2020 </p>
 				</div>		
 			</div>
-	</div>
 
 	<script src="js/jquery-3.2.1.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>

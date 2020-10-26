@@ -73,7 +73,7 @@ public function modificar_contraseña(){
 			$consulta3=$conexion->prepare("UPDATE usuarios SET pass = :pass_nueva WHERE usuario = :usuario");
 			$consulta3->execute(array(':pass_nueva' =>$pass_nueva, ':usuario' => $usuario ));
 
-		if ($_SESSION['usuario']) {header("Location: gestion_usuarios.php");}else {header("Location: index.php");}
+		if ($_SESSION['usuario']) {header("Location: index.php");}else {header("Location: index.php");}
 			
 
 		}else{
@@ -102,8 +102,8 @@ class Administrador extends Usuario{ /* Clase represenativa de los administrador
 	
 	$conexion=conectar_bd('localhost', 'inv_bav', 'root', '');
 
-	$consulta1=$conexion->prepare("DELETE FROM usuarios WHERE ID = :id");
-	$consulta1->execute(array(":id" => $id));
+	$consulta1=$conexion->prepare("UPDATE usuarios SET pass = :pass, cedula = :cedula, IDperfil = :perfil, nacimiento = :nacimiento WHERE ID = :id");
+	$consulta1->execute(array(":pass"=>'',":cedula"=>'0', ":perfil"=>'', ":nacimiento"=>'00/00/000', ":id"=>$id));
 
 	}	/*funcion para eliminar un usuario del sistema*/
 }

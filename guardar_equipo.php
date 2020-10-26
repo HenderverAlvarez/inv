@@ -42,7 +42,7 @@ $unidad->registrar_unidad($serial, $rif, $modelo, $banco, $afiliacion, $n_termin
 	
 	$mov=new Inventario($serial,$fecha, $realizadopor, $n_terminal, $afiliacion, "registro");
 	$mov->guardar_mov($serial, $fecha, $realizadopor, $n_terminal, $afiliacion, "registro");	
-	header("Location: index.php");
+	header("Location: inventario.php");
 
 	
 

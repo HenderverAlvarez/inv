@@ -12,35 +12,33 @@ $errores="";
 	$usuario=$consulta->fetch();
 	$password=$usuario['pass'];
 
+
+	$pass_n=$_POST['pass_n'];	
+	$pass_n2=$_POST['pass_n2'];
 	$pass_a=$_POST['pass_a'];
-	$pass_a=hash("SHA512", $pass_a);
+	
 
-	if ($pass_a == $password) {
+	if (!empty($pass_n) && !empty($pass_n2) && !empty($pass_a)){
+	
+		$pass_a=hash("SHA512", $pass_a);
 
+		if ($pass_a == $password) {
 
-
-	}else{
-		$errores.="<li class='text-center'>La contraseña actual introducida no coincide con la registrada en la base de datos</li>";
-	}
-
-		$pass_n=$_POST['pass_n'];	
-		$pass_n2=$_POST['pass_n2'];
-		
 		$pass_n=hash("SHA512", $pass_n);
 		$pass_n2=hash("SHA512", $pass_n2);
 
-
-
 		if ($pass_n == $pass_n2) {
 
-	$usuario = new usuario($_SESSION['usuario'], " ");
-	$usuario->modificar_contraseña();	
+		$usuario = new usuario($_SESSION['usuario'], " ");
+		$usuario->modificar_contraseña();	
 
 		}else{
 			$errores.="<li class='text-center'>la contraseña nueva y su confirmacion no coinciden</li> <br>"; 
 		}
-
-
+	}else{
+		$errores.="<li class='text-center'>La contraseña introducida no coincide con la registrada en la base de datos</li>";
 	}
+	}else{$errores.="<li class='text-center'>Ingresa toda la informacion Solicitada</li> <br>"; }}
+
 require 'views/camb_clave_i.view.php';
  ?>

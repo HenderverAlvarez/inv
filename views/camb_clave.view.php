@@ -6,30 +6,26 @@
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/estilo.css">
+	<link rel="shortcut icon" type="image/png" href="img/favicon.jpg">
 
 </head>
 
 <body>
 
 
-	<div class="container">
+	<div class="container-fluid">
 	
 						<!--Fila Para El header-->
-
-			<div class="row header mt-3">
 				
-				<div class="col-md-11 col-sm-12 bg-info">
-					
-					<h1 class="bav">Banco Agricola De Venezuela</h1>
+			<div class="row jumbotron jumbo">
 
-				</div>
+					<div class="col-md-12">
 
-				<div class="col-md-1 hidden-sm-down">
-					<div class="logo">
-						<img src="#" class="img-fluid">
+						<h1 class="bav">Banco Agricola De Venezuela</h1>
+						<hr>
+						<p>Inventario de puntos de venta</p>
+
 					</div>
-				</div>
-
 			</div>
 
 
@@ -40,9 +36,9 @@
 
 
 																	<!--Formulario de modificacion-->
-				<div class="col-md-8 align-self-center mt-4">
+				<div class="col-md-6 align-self-center formulario_recuperacion mt-4">
 							
-							<h3 class="title mb-3">Recuperar Contraseña</h3>
+							<h3 class="title mt-3 mb-3">Recuperar Contraseña</h3>
 
 					<form action="<?php echo $_SERVER['PHP_SELF']?>" method="POST" class="form">
 					
@@ -51,20 +47,32 @@
 									<form method='POST' class='form'>
 											
 
-										<div class="form-group mb-3">
-										<label for="usuario">Indique su usuario</label> <input class="form-control" type="text" name="usuario" id="usuario" placeholder="usuario">
+										<div class="form-group mb-1">
+										<label for="usuario"></label> <input class="form-control" type="text" name="usuario" id="usuario" placeholder=" Indique su Usuario">
 										</div>
 
-										<div class='form-group mb-3'>
-										<label for='pass_n'>Escriba su nueva clave</label> <input class='form-control' type='password' name='pass_n' id='pass_n'>
-										</div>
+										<div class="row mb-3">
+											
+											<div class="col-6">
+													<div class='form-group mb-3'>
+														<label for='pass_n'></label> <input class='form-control' type='password' name='pass_n' id='pass_n' placeholder="Contraseña Nueva">
+													</div>											
+											</div>
 
-										<div class='form-group mb-3'>
-										<label for='pass_n2'>Repita su nueva clave</label> <input class='form-control' type='password' name='pass_n2' id='pass_n2'>
+											<div class="col-6">
+												<div class='form-group mb-3'>
+													<label for='pass_n2'></label> <input class='form-control' type='password' name='pass_n2' id='pass_n2' placeholder="Confirmar Contraseña">
+												</div>
+												
+											</div>
+
 										</div>
+									
+
+										
 
 										<div class='form-group mb-4'>
-										<button class='btn btn-primary btn-block' value='Continuar'>Continuar</button>
+										<button class='btn btn-block boton' value='Continuar'>Continuar</button>
 
 										</div>
 
@@ -80,14 +88,12 @@
 
 			</div>
 
-			<div class="row footer">
+			<div class="row footer bg-inverse mt-5">
 				<div class="col-12">
-					<div class="media">
-						
-
-					</div>
+					<p class="text-center text-white my-3" > Henderver Alvarez || Banco Agricola de Venezuela || UPTAMCA 2020 </p>
 				</div>		
 			</div>
+
 
 	</div>
 

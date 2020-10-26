@@ -1,4 +1,319 @@
 *{
 	padding: 0;
 	margin: 0;
+	font-family: 'Roboto', sans-serif;
 }
+body{
+	background: #cdc9c3;
+}
+
+/*En el login*/
+.jumbo{
+	background: url(background.jpg);
+	font-size: 25px;
+	font-weight: 500;
+	padding-top: 25;
+	padding-left: 10px;
+	padding-bottom: 15px;
+}
+
+.jumbo h1{
+	font-weight: 500;
+	font-size: 50px
+}
+
+.formulario_login{
+	border-top: 4px solid #519872; 
+	border-bottom: 4px solid #519872; 
+}
+
+.formulario_login h3{
+	font-size: 30px;
+	font-weight: 500;
+}
+
+.formulario_login a{
+	color: #158467;
+	font-weight: 200;
+}
+
+.boton{
+	font-family: Roboto;
+	font-weight: 300;
+	background: #81b214;
+	color: #000;
+	transition: all .3s ease;
+	border: 1px solid #a4b494;
+}
+
+.botoni{
+	font-family: Roboto;
+	font-weight: 300;
+	background:#000;
+	color: #81b214;
+	transition: all .3s ease;
+	border: 1px solid #a4b494;
+}
+
+.boton:hover{
+	background: #335d2d;
+	color: #fff;
+	border: 1px solid #158467;
+}
+
+.botoni:hover{
+	background: #335d2d;
+	color: #fff;
+	border: 1px solid #158467;
+}
+
+.carousel{
+		box-shadow: 0px 5px 5px 0px rgba(0,0,0,.5);
+}
+
+.carousel .carousel-inner .imagen-carrusel{
+	height: 450px;
+	width: 100%;
+}
+
+.formulario_login form .form-group .icono{
+		font-size: 20px;
+	}
+
+/*Recuperacion de claves*/
+
+
+.formulario_recuperacion{
+	border-radius: 3px;
+	border-top: 4px solid #519872; 
+	border-bottom: 4px solid #519872; 
+}
+
+.back a{
+	font-size: 20px;
+	color: #158467;
+	font-weight: 200;
+}
+
+/*PAgina principal*/
+
+
+/*Nav  */
+.nav{
+	background: #232323;
+	min-height: 100vh;
+	min-width: 250px;
+	padding: 0;
+	color: #7ea04d;
+}
+
+.nav .titulo{
+	color: #1a1c20;
+	padding-top: 10px;
+	padding-bottom: 5px;
+	padding-left: 5px;
+	background: #7ea04d;
+	margin-bottom: 2px;
+
+}
+.nav .titulo h4{
+
+	font-size: 35px;
+ 	padding: 20px;
+ 	text-align: center;
+ 	font-weight: 300;
+ 	margin: 0;
+}
+
+.nav .titulo i{
+	margin-right: 5px;
+}
+
+.nav a, .nav .min a{
+
+	display: block;
+	padding: 15px;
+	border-bottom: 1px solid rgba(255,255,255,.4);
+	color: #7ea04d;
+	transition: all .5s ease;
+}
+.nav a i{
+	margin-right: 10px;
+}
+.nav a:hover{
+
+	text-decoration: none;
+	display: block;
+	padding: 15px;
+	background: #7ea04d;
+	border-bottom: 1px solid rgba(255,255,255,.4);
+	color: #1a1c20;
+}
+
+/* bienvenida */
+.bienvenida{
+
+}
+.bienvenida h4{
+	font-size: 28px;
+}
+/*Panel de inventario*/
+.unidad .card{
+	background: #1a1c20;
+	color:  #7ea04d;
+	border-radius: 3px;
+	border-bottom: 4px solid #7ea04d; 
+}
+
+.unidad .card-header{
+	background: #7ea04d;
+	color: #1a1c20;
+
+}
+
+.unidad .card-footer{
+	background: #1a1c20;
+	color:  #7ea04d;
+	border-radius: 3px;
+}
+
+.punto a{
+	padding: 10px;
+}
+
+/*PAginacion */
+
+a.page-link, a.pagination{
+	border:1px solid #1a1c20;
+	color: #1a1c20;
+	background: #7ea04d;
+	transition: all .4s ease;
+}
+
+
+a.page-link:hover{
+	border:1px solid #7ea04d;
+	color: #7ea04d;
+	background: #1a1c20;
+}
+
+a.active{
+	border-right:1px solid #1a1c20;
+	color:#7ea04d;
+	background:#1a1c20;
+	transition: all .4s ease;
+}
+
+li.disabled{
+	color: #1a1c20;
+	background: #7ea04d;
+	cursor: not-allowed;
+}
+
+
+/*-- VISTA GENERAL ---*/
+
+.main .card-block .general{
+	border-bottom: 1px solid rgba(126,160,77,.3);
+}
+
+/**/
+/**/
+
+
+.modificacion{
+	font-size: 18px;
+	padding-top: 10px;
+	color: #7ea04d;
+	background: #1a1c20;
+	border-radius: 3px;
+	border-top: 4px solid #519872; 
+	border-bottom: 4px solid #519872; 
+}
+
+.modificacion_a{
+	font-size: 18px;
+	padding-top: 10px;
+	color: #7ea04d;
+	background: #1a1c20;
+	border-radius: 3px;
+	border-top: 4px solid #519872; 
+	border-bottom: 4px solid #519872; 
+}
+/**/
+@media screen and (max-width: 1000px){
+	.jumbo{
+		font-size: 20px;
+	}
+	.jumbo h1{
+		font-size: 35px;
+	}
+
+	.carousel{
+		display: none;
+	}
+	.formulario_login form .form-group .boton{
+		width:  300px;
+	}
+
+	.formulario_login form .form-group .icono{
+		font-size: 20px;
+		margin-right: 0;
+	}
+
+
+	.nav{
+		min-width: auto;
+	}
+	nav .titulo{
+		display: none;
+	}
+	.nav a span{
+		display: none;
+	}
+	.nav a i{
+		margin: 0;
+	}
+
+	.nav .titulo i{
+	margin: 0;
+	}
+	.modificacion_a{
+		font-weight: 300;
+		overflow-x: scroll;
+		font-size: 15px;
+	}
+
+}
+
+@media screen and (max-width: 575px){
+	.nav{
+		min-width: 100%;
+		min-height: auto;
+	}
+	.nav a, .nav .min a{
+		min-width: auto;
+		display: inline-block;
+		border-bottom: none;
+	}
+	.modificacion_a{
+		font-weight: 300;
+		overflow-x: scroll;
+		font-size: 12px;
+}
+}
+
+/*footer*/
+
+.footer{
+	border-top: 2px solid #7ea04d; 
+	padding: 10px;
+}
+
+
+/*
+implementa esto en la paginacion cuando hagas commit ;v
+ ($i = max(1, $pagina, -4; $i <= min($pagina +4, $numeroDePaginas; $i++)))
+
+*/
+

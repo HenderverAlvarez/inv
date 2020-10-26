@@ -27,35 +27,35 @@ if (!empty($serial) && !empty($rif) && !empty($modelo) && !empty($banco) && !emp
 
 	$serial=filter_var($serial, FILTER_SANITIZE_STRING);		
 	if (strlen($serial) > 20) {
-		$errores.='<li>Ingresa un serial Valido (Maximo 20 caracteres)</li>';
+		$errores.="<li class='text-center'>Ingresa un serial Valido (Maximo 20 caracteres)</li>";
 		}
 
 /*validacion del rif*/
 
 	$rif=filter_var($rif, FILTER_SANITIZE_STRING);
 
-	if (strlen($rif) > 12){$errores.='<li>Ingresa un numero de Rif Valido (Maximo 12 caracteres)</li>';}
+	if (strlen($rif) > 12){$errores.="<li class='text-center'>Ingresa un numero de Rif Valido (Maximo 12 caracteres)</li>";}
 
 
 /*Validacion del numero de afiliado*/
 	$afiliacion=filter_var($afiliacion, FILTER_SANITIZE_STRING);
-	if (strlen($afiliacion) > 4 || strlen($afiliacion) == 0){$errores.='<li>Ingresa un numero de afiliado Valido (Maximo 4 caracteres)</li>';}	
+	if (strlen($afiliacion) > 4 || strlen($afiliacion) == 0){$errores.="<li class='text-center'>Ingresa un numero de afiliado Valido (Maximo 4 caracteres)</li>";}	
 
 /*Validacion del numero de terminal*/
 
 	$n_terminal=filter_var($n_terminal, FILTER_SANITIZE_STRING);
-	if (strlen($n_terminal) > 4){$errores.='<li>Ingresa un numero de terminal Valido (Maximo 3 caracteres)</li>';}	
+	if (strlen($n_terminal) > 4){$errores.="<li class='text-center'>Ingresa un numero de terminal Valido (Maximo 3 caracteres)</li>";}	
 
 /*Validacion del numero de fantasia*/
 $fantasia=filter_var($fantasia,FILTER_SANITIZE_STRING);
 		if (strlen($fantasia) > 50){
-			$errores.='<li>Nombre Fantasia invalido (Maximo 50 caracteres)</li>';	
+			$errores.="<li class='text-center'>Nombre Fantasia invalido (Maximo 50 caracteres)</li>";	
 			}
 
 /*validacion de razon social*/
 	$razonSocial=filter_var($razonSocial,FILTER_SANITIZE_STRING);
 		if (strlen($razonSocial) > 50){
-			$errores.='<li>Razon social invalida (Maximo 50 caracteres)</li>';	
+			$errores.="<li class='text-center'>Razon social invalida (Maximo 50 caracteres)</li>";	
 			}
 
 /*Validacion de localizacion*/
@@ -73,7 +73,7 @@ $fantasia=filter_var($fantasia,FILTER_SANITIZE_STRING);
 if (empty($coincidencias)) {$errores.="<li class='text-center m-4'>No existe Ningun registro con el serial ingresado...</a></li> ";}
 
 
-}else{$errores.='<li>Ingresa toda la informacion solicitada</li>';}
+}else{$errores.="<li class='text-center'>Ingresa toda la informacion solicitada</li>";}
 	
 $direccion="conf_equipo.php?serial=".$serial."&rif=".$rif."&modelo=".$modelo."&banco=".$banco."&afiliado=".$afiliacion."&terminal=".$n_terminal."&fantasia=".$fantasia."&razon=".$razonSocial."&localizacion=".$localizacion."&status=".$status."&realizadopor=".$realizadopor."&serial_sustituto1=". $serial_sustituto1."&serial_sustituto2=". $serial_sustituto2."&serial_sustituto3=". $serial_sustituto3;
 
